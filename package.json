@@ -2,13 +2,19 @@
   "name": "ng-electron",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "main.dev.js",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
+    "ng": "ng serve",
+    "start": "concurrently --kill-others \"npm run start:angular\" \"npm run start:electron\"",
+    "build": "npm run build:angular && npm run build:files && npm run build:electron",
+    "build:angular": "ng build --prod --base-href .",
+    "build:electron": "electron-packager ./dist --version 1.0.0 --platform=win32 --overwrite --icon=./app-icon",
+    "build:files": "node build.js",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start:electron": "electron .",
+    "start:angular": "ng serve"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +39,9 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "concurrently": "^3.5.1",
+    "electron": "^1.7.12",
+    "electron-packager": "^11.0.0",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",

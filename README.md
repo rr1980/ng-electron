@@ -1,37 +1,49 @@
 # NgElectron
 
+Seed project for Angular 5 and Electron.
+
 This project was generated with:
 
  [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
  
  [Electron](https://github.com/electron/electron) version 1.7.12
+ 
+## Table of Contents
 
-## Development server
+* [Installation](#installation)
+* [Development Server](#development-server)
+* [Build](#build)
+ 
+## Installation
 
-Run `npm start` for a dev server. The @angular/cli dev server will run in Electron.
+Clone `ng-electron` repository using git:
 
-OR
+```$xslt
+git clone https://github.com/jsalazar87/ng-electron.git
+cd ng-electron
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Install dependencies
 
-## Code scaffolding
+```$xslt
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Development Server
+
+Run `npm start` for a dev server. 
+[Angular CLI](https://github.com/angular/angular-cli) will start the server on `http://:4200/` and 
+[Electron](https://github.com/electron/electron) will open once the app is ready. 
+The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `npm run build` to build the project and package Electron via [Electron-Packager](https://github.com/electron-userland/electron-packager)
+Run `npm run build`. [Angular CLI](https://github.com/angular/angular-cli) will store the build files on `dist/` folder. 
+[Electron-Packager](https://github.com/electron-userland/electron-packager) will use the `dist/` to package [Electron](https://github.com/electron/electron) for
+Windows.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

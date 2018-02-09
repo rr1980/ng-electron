@@ -1,8 +1,16 @@
 # NgElectron
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+This project was generated with:
+
+ [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+ 
+ [Electron](https://github.com/electron/electron) version 1.7.12
 
 ## Development server
+
+Run `npm start` for a dev server. The @angular/cli dev server will run in Electron.
+
+OR
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
@@ -11,6 +19,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
+
+Run `npm run build` to build the project and package Electron via [Electron-Packager](https://github.com/electron-userland/electron-packager)
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
